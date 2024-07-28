@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+<name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+ <title>Services</title>
+
+ <style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial;
+  }
+  
+  /* The grid: Four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+  
+  /* Style the images inside the grid */
+  .column img {
+    opacity: 0.8; 
+    cursor: pointer; 
+  }
+  
+  .column img:hover {
+    opacity: 1;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* The expanding image container */
+  .container {
+    position: relative;
+    display: none;
+  }
+  
+  /* Expanding image text */
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+  }
+  
+  /* Closable button inside the expanded image */
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
+  </style>
+
+
+</head>
+
+<body>
+ 
+
+  <nav>
+    <ul>
+     <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Services Offered</h1>
+    </header>
+
+  <main>
+   <h2>Services</h2>
+    <h3>Photography</h3>
+   <p>I provide photography services for various events, including corporate functions and family gatherings. Contact me for price inquiries.</p>
+   <h3>Videography</h3>
+    <p>I offer videography services to capture your special moments. Get in touch for more details.</p>
+    
+    <h3>Photo Restoration</h3>
+    <p>As part of my services, I also provide photo restoration services, including converting VHS cassettes to digital media. Contact me for more information about this service.</p>
+    
+<main>
+
+
+
+
+  
+</section>
+
+<div style="text-align:center">
+  <h2>Tabbed Image Gallery</h2>
+  <p>Click on the images below:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="kid.png" alt="pikachu" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="apple.png" alt="tree" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="dog.png" alt="sunset" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="im.png" alt="flower" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="ima.png" alt="flower" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="m.png" alt="flower" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="mys.png" alt="flower" style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+
+  <footer>
+   <p>© Tebalelo |14HA2109019@Boston.co.za |14HA2109019  </p>
+  </footer>
+
+
+
+  
+</body>
+
+</html>
